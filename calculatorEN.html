@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcel Váňa - Front-End Developer</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/desktop.css">
+    <link rel="stylesheet" href="./CSS/cal_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="navigation">
+        <nav class="navbar">
+            <div class="header_name">
+                <a class="name_text" href="./index.html"><span class="gold">M</span>arcel<span class="gold"> V</span>áňa</a>
+            </div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <ul class="navigation_bar content">
+                <a href="./index.html#about_me" class="o_mne nav-link" data-target="about_me"><span class="gold">A</span>bout me</a>
+                <a href="./index.html#skills" class="dovednosti nav-link" data-target="skills"><span class="gold">S</span>kills</a>
+                <a href="./index.html#projects" class="projekty nav-link" data-target="projects"><span class="gold">P</span>rojects</a>
+                <a href="./index.html#contact" class="kontakt nav-link" data-target="contact"><span class="gold">C</span>ontact</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container content">
+            <h2 class="mortage_calculator">Hypoteční kalkulačka</h2>
+            <div class="input-fields">
+                <div class="container_fields1">
+                    <label for="age">Kolik je Vám let?</label>
+                    <input type="text" placeholder="18-65" id="age" inputmode="numeric" pattern="[0-9]*" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                    <label for="averageSalary">Čistý měsíční příjem domácnosti?</label>
+                    <input type="text" placeholder="Např. 50000" id="averageSalary" inputmode="numeric" pattern="[0-9]*" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                    <label for="installments">Kolik platíte měsíčně za Vaše jiné úvěry, kreditní karty atd?</label>
+                    <input type="text" placeholder="Např. 10000" id="installments" inputmode="numeric" pattern="[0-9]*" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                </div>
+                <div class="container_fields2">
+                    <label for="years">Na kolik let si chcete půjčit?</label>
+                    <input type="text" placeholder="Např. 30" id="years" inputmode="numeric" pattern="[0-9]*" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                    <label for="interestRate">Za jakou procentní úrokovou sazbu Vám banka půjčí?</label>
+                    <input type="text" placeholder="Např. 4.99" id="interestRate">
+                    <label for="propertyValue">Kolik peněz si potřebujete půjčit od banky na nemovitost?</label>
+                    <input type="text" placeholder="Např. 5000000" id="propertyValue" inputmode="numeric" pattern="[0-9]*" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                </div>
+            </div>
+            <div class="container_button">
+                <button class="button_cal" onclick="calculateMortgage()">Spočítat</button>
+            </div>
+                <div id="result" class="result"></div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer">© 2023 Marcel Váňa -  All right Reserved.</p>
+    </footer>
+    
+    <script src="./Script/cal_script.js"></script>
+    <script src="./Script/script.js"></script>
+</body>
+
+</html>

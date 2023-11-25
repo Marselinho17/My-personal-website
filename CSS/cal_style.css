@@ -1,0 +1,128 @@
+body {
+    font-family: "Work sans", 'Dosis', sans-serif;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+h2.mortage_calculator {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline 2px var(--second-text-color);
+    margin-bottom: 4rem;
+}
+
+.input-fields {
+    display: grid;
+    margin: 0 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    margin-top: 5rem;
+    display: grid;
+    max-width: 400px;
+    height: auto;
+}
+
+input {
+    width: 100%;
+    color: var(--second-text-color);
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+}
+
+#propertyValue {
+    margin-bottom: 0;
+}
+
+
+label {
+    font-weight: bold;
+    font-style: oblique;
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+}
+
+button {
+    background-color: var(--second-text-color);
+    color: var(--main-bg-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    font-weight: bold;
+    font-family: "Work sans", 'Dosis', sans-serif; 
+}
+
+#averageSalary::placeholder,
+#installments::placeholder,
+#age::placeholder,
+#years::placeholder,
+#interestRate::placeholder,
+#propertyValue::placeholder {
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+}
+
+
+
+.button_cal:hover,
+.button_cal:active {
+    transition: 0.30s;
+    box-shadow: 0px 0px 7px 7px rgba(151, 150, 150, 0.2);
+}
+
+.result {
+    margin: 2rem 1rem;
+}
+
+@media screen and (min-width: 860px) {
+    main {
+        height: 100vh;
+    }
+    
+    .input-fields {
+        display: flex;
+        gap: 3rem;
+        margin: 0 2rem;
+        flex-direction: row;
+    }
+
+    #propertyValue,
+    #installments {
+    margin-bottom: 0;
+    }
+
+    .container_fields1, 
+    .container_fields2 {
+        width: 50%;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 3rem 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        box-shadow: 0px 0px 7px 7px rgba(0, 0, 0, 0.2);
+        display: grid;  
+    }
+    button {
+        margin-left: 2rem;
+    }
+    .result {
+        margin-left: 2rem;
+    }
+}
