@@ -244,10 +244,13 @@ ul a:active {
 
     .container_languages {
         margin-left: 0;
+        margin-top: 1rem;
+  
     }
 
     a.languages {
-        font-size: clamp(.7rem, 2vw, 1.2rem);
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+        font-style: italic;
     }
 }
 
